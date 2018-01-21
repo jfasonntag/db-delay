@@ -1,5 +1,6 @@
 from selenium import webdriver
 from bs4 import BeautifulSoup
+import pandas as pd
 
 # ============================================================================#
 # A few parameters to set upfront
@@ -63,7 +64,34 @@ class BrowserObject(webdriver.Firefox):
         self.find_element_by_name('start').click()
         
         return BeautifulSoup(self.page_source,"html.parser")
+    
 
+# Turn BeautifulSoup output of a page into a nice DataFrame
+def parse_results(results):
+    data = pd.DataFrame()
+    
+    # Find table with results and loop over rows
+    rows = results.find(attrs={"class":"result stboard arr"}).findAll("tr")
+    for row in rows:
+        row_dict ={}
+        for element in ['time', 'train', 'platform', 'ris']:
+            item = row.find(attrs={'class':element})
+            if item is not None: 
+                row_dict.update({element:row.find(attrs={'class':element}).get_text().strip()}) 
+        if row_dict.get('train') =='':
+            for tds in row.find_all(attrs={'class':'train'}):
+                if tds.get_text().strip() != '' : 
+                    row_dict.update({'train':tds.get_text().strip()})
+                    break
+        data = data.append(pd.DataFrame(row_dict, index=[0]))
+    
+    # Save when the querry was returned and get rive of pagination
+    data['query_time'] = data[data['train']=='aktuelle Uhrzeit'].time.to_string(index=False)
+    data = data[(data['time'] != 'früher') & (data['time'] != 'später') & (data['time'] != 'Zeit') & (data['train'] != 'aktuelle Uhrzeit')]
+        
+    return data.reset_index(drop=True)
+            
+            
 
 
 
