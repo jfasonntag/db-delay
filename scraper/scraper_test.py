@@ -1,6 +1,8 @@
 from selenium import webdriver
 from bs4 import BeautifulSoup
 import pandas as pd
+import re
+from datetime import datetime
 
 # ============================================================================#
 # A few parameters to set upfront
@@ -85,10 +87,17 @@ def parse_results(results):
                     break
         data = data.append(pd.DataFrame(row_dict, index=[0]))
     
-    # Save when the querry was returned and get rive of pagination
+    # Save when the querry was returned and get rid of pagination
     data['query_time'] = data[data['train']=='aktuelle Uhrzeit'].time.to_string(index=False)
     data = data[(data['time'] != 'früher') & (data['time'] != 'später') & (data['time'] != 'Zeit') & (data['train'] != 'aktuelle Uhrzeit')]
-        
+    
+    # Add a date stamp from the soup
+    data['date'] = re.search('[0-9]{4}-[0-9]{2}-[0-9]{2}',results.text).group(0)
+    #data['date'] = datetime.strptime(re.search('[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]',results.text).group(0), '%Y-%m-%d')
+
+    # Extract the time of the delay
+    data['delay_time'] = [re.search('[0-9]{2}:[0-9]{2}', delay_info).group(0) if re.search('[0-9]{2}:[0-9]{2}', delay_info) is not None else None for delay_info in data['ris']]
+    
     return data.reset_index(drop=True)
             
             
@@ -98,11 +107,13 @@ def parse_results(results):
 # ============================================================================#
 # Run script (move to separate file at some point)
 # ============================================================================#
-content = []
+content = pd.DataFrame()
 
 browser = BrowserObject()
 
 for station in stations:
-    content += [browser.get_stationpage(station)]
+    new_content = parse_results(browser.get_stationpage(station))
+    new_content['station'] = station
+    content = content.append(new_content)
     
 browser.close()
