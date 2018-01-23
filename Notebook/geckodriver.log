@@ -1,0 +1,50 @@
+1516644823061	geckodriver	INFO	geckodriver 0.19.1
+1516644823075	geckodriver	INFO	Listening on 127.0.0.1:51013
+1516644826166	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\Jan Sonntag\\AppData\\Local\\Temp\\rust_mozprofile.un6tiUdgw5gV"
+1516644828627	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\Jan Sonntag\AppData\Local\openvr\openvrpaths.vrpath
+[Parent 9592, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+Unable to read VR Path Registry from C:\Users\Jan Sonntag\AppData\Local\openvr\openvrpaths.vrpath
+[Child 10024, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 10024, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1516644833124	Marionette	INFO	Listening on port 51023
+1516644833734	Marionette	WARN	TLS certificate errors will be ignored for this session
+1516644833844	Marionette	DEBUG	Register listener.js for window 4294967297
+1516644833938	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1516644834502	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1516644834502	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1516644837144	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://reiseauskunft.bahn.de/bin/bhftafel.exe/"
+1516644843427	Marionette	DEBUG	Received DOM event "pageshow" for "https://reiseauskunft.bahn.de/bin/bhftafel.exe/"
+1516644843742	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1516644843983	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1516644844229	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1516644844560	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1516644844606	Marionette	DEBUG	Received DOM event "beforeunload" for "https://reiseauskunft.bahn.de/bin/bhftafel.exe/"
+1516644844905	Marionette	DEBUG	Received DOM event "pagehide" for "https://reiseauskunft.bahn.de/bin/bhftafel.exe/"
+1516644844908	Marionette	DEBUG	Received DOM event "unload" for "https://reiseauskunft.bahn.de/bin/bhftafel.exe/"
+1516644845280	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "4294967301"
+1516644845283	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "4294967303"
+1516644845288	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "4294967309"
+1516644845291	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "4294967307"
+1516644845292	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "4294967305"
+1516644845293	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "4294967311"
+1516644845455	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://reiseauskunft.bahn.de/bin/bhftafel.exe/dn?ld=15076&country=DEU&protocol=https:&rt=1&"
+1516644846233	Marionette	DEBUG	Received DOM event "pageshow" for "https://reiseauskunft.bahn.de/bin/bhftafel.exe/dn?ld=15076&country=DEU&protocol=https:&rt=1&"
+1516644846700	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1516644846728	Marionette	DEBUG	Received DOM event "beforeunload" for "https://reiseauskunft.bahn.de/bin/bhftafel.exe/dn?ld=15076&country=DEU&protocol=https:&rt=1&"
+1516644847065	Marionette	DEBUG	Received DOM event "pagehide" for "https://reiseauskunft.bahn.de/bin/bhftafel.exe/dn?ld=15076&country=DEU&protocol=https:&rt=1&"
+1516644847068	Marionette	DEBUG	Received DOM event "unload" for "https://reiseauskunft.bahn.de/bin/bhftafel.exe/dn?ld=15076&country=DEU&protocol=https:&rt=1&"
+1516644847327	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "4294967318"
+1516644847327	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "4294967316"
+1516644847328	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "4294967314"
+1516644847449	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://reiseauskunft.bahn.de/bin/bhftafel.exe/dn?ld=15076&protocol=https:&rt=1&"
+1516644847802	Marionette	DEBUG	Received DOM event "pageshow" for "https://reiseauskunft.bahn.de/bin/bhftafel.exe/dn?ld=15076&protocol=https:&rt=1&"
+1516644848139	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1516644848170	Marionette	DEBUG	Received DOM event "beforeunload" for "https://reiseauskunft.bahn.de/bin/bhftafel.exe/dn?ld=15076&protocol=https:&rt=1&"
+1516644848364	Marionette	DEBUG	Received DOM event "pagehide" for "https://reiseauskunft.bahn.de/bin/bhftafel.exe/dn?ld=15076&protocol=https:&rt=1&"
+1516644848367	Marionette	DEBUG	Received DOM event "unload" for "https://reiseauskunft.bahn.de/bin/bhftafel.exe/dn?ld=15076&protocol=https:&rt=1&"
+1516644848807	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "4294967325"
+1516644848807	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "4294967323"
+1516644848808	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "4294967321"
+1516644848897	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://reiseauskunft.bahn.de/bin/bhftafel.exe/dn?ld=15076&country=DEU&protocol=https:&rt=1&"
+1516644849230	Marionette	DEBUG	Received DOM event "pageshow" for "https://reiseauskunft.bahn.de/bin/bhftafel.exe/dn?ld=15076&country=DEU&protocol=https:&rt=1&"

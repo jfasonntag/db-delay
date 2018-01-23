@@ -11,7 +11,7 @@ check_products = (0,1) # checkmarks to click in the query form: 0 = ICE, 1 =EC/I
 
 # ============================================================================#
 # Set Scraper scope (should be moved to a sperate file later)
-stations = ['München Hbf', 'Augsburg Hbf', 'Ulm Hbf']
+stations = [u'München Hbf', 'Augsburg Hbf', 'Ulm Hbf']
 
 
 
